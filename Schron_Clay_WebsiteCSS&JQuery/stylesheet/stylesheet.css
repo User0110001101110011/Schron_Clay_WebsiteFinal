@@ -1,5 +1,4 @@
 /* universal styles */
-
 body {
     margin: 0;
     font-family: bilo;
@@ -60,6 +59,11 @@ a {
 .nav button {
     display: none;
     text-align: right;
+    color: #ffffff;
+    background-color: #B1BDAF;
+    padding-top: 3px;
+    border: none;
+    border-radius: 10px;
 }
 .material-symbols-outlined {  
     font-variation-settings:  
@@ -68,11 +72,30 @@ a {
         'GRAD' 0,  
         'opsz' 24
 }
+#menu {
+    background-color:#B1BDAF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+#menu a {
+    color: #ffffff;
+    display: block;
+    padding: 10px 20px;
+}
+#close-menu {
+    border: none;
+    color: #ffffff;
+    background-color: transparent;
+    font-size: 30px;
+}
 
 /* hero styles */
 
 .hero {
-    padding: 32px;
     background-size: cover;
     background-image: url('../images/hero-image.jpg');
     height: 560px;
@@ -80,6 +103,7 @@ a {
     margin-bottom: 20px;
 }
 .hero-text {
+    padding: 32px;
     margin-left: 50px;
     position: absolute;
     top: 50%;
@@ -122,7 +146,7 @@ a {
 }
 .hr2 {
     color: #ffff;
-    width: 301px;
+    max-width: 301px;
     margin-top: 20px;
 }
 
@@ -196,7 +220,7 @@ a {
     height: 500px;
 }
 .michelin-star {
-    padding-left: 100px;
+    padding-left: 200px;
     max-width: 300px; 
     height: auto;
     vertical-align: middle;
@@ -277,9 +301,37 @@ a {
     font-family: bilo;
 }
 
+/* animation */
+
+.cta-button:hover {
+    transform: scale(1.1);
+}
+.card-button:hover {
+    transform: scale(1.1);
+}
+.fade-in {
+    animation-name: fade-in;
+    animation-duration: 1s;
+}
+@keyframes fade-in {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+        scale: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        scale: 1;
+    }
+}
+
 /* fancy stuff */
 
 @media screen and (max-width: 648px) {
+    body {
+        overflow-x: hidden;
+    }
     .nav a {
         display: none;
     }
@@ -287,15 +339,28 @@ a {
         display: inline;
     }
     .navigation {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
         text-align: right;
     }
     .col-3 {
         grid-template-columns: 1fr;
     }
+    .hero-subhead-style {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+    }
+    .hero {
+        margin-left: auto;
+        margin-right: auto;
+
+    }
     .hero-text {
         margin-left: 0px;
-
+    }
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
     }
     .nav {
         grid-template-columns: 1fr;
@@ -305,6 +370,8 @@ a {
     }
      .awards-text {
         font-size: 15px;
+        text-align: justify;
+        text-justify: inter-word;
     }
     .awards-headline {
         font-size: 20pt;
@@ -314,22 +381,24 @@ a {
     .green-box {
         background-color: #B1BDAF;
         max-width: 100%;
-        height: 630px;
+        height: 730px;
     }
     .footer-logo {
         height: auto;
         padding-left: 20px;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 20px;
+        padding-bottom: 0px;
     }
     .footer-text {
-        
         margin-left: 40px;
+        margin-top: 20px;
         margin-right: auto;
         font-size: 15px;
         text-align: left;
         font-weight:lighter;
         vertical-align: middle;
+        
+        
     }
     .awards-text {
         font-size: 15px;
@@ -345,13 +414,49 @@ a {
      }
      .awards-text {
         font-size: 15px;
-        margin: 40px;
+        margin: 20px;
         margin-top: 10px;
     }
     .footer-headline {
-        margin-left: 40px;
+        margin-left: 20px;
     }
-    
-    
-
+    .card {
+        padding: 20px;
+    }
+    .card-cta {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .michelin-star {
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px; 
+        height: auto;
+        vertical-align: middle;
+    }
+    .old-man {
+       margin-left: auto;
+       margin-right: auto;
+       max-width: 300px;
+       padding-top: 40px;
+       vertical-align: middle;
+    }
+    .green-box {
+        text-align: center;
+    }
+    .footer-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 56px;
+        gap: 10px;
+    }
+    .icons {
+        gap: 10px;
+    }
+    .socials {
+        text-align: center;
+        margin-top: 75px;
+        margin-bottom: 20px;
+    }
 }

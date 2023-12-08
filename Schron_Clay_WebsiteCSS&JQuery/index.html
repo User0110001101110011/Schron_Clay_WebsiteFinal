@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://use.typekit.net/isk7tvl.css">
     <link rel="stylesheet" href="https://use.typekit.net/tdx0lbn.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-
+    <div id="menu" style="display: none;" class="header">
+        <button id="close-menu">X</button>
+        <a href="">Menu</a>
+        <a href="">About Us</a>
+        <a href="">Location</a>
+        <a href="">Reserve</a>
+    </div>
 <header class="navigation header">
         <div class="nav-image">
             <a href="#"><img src="images/KasamaLogo.svg" alt="This is the kasama logo" width="116px"></a>
@@ -21,7 +28,7 @@
             <a href="#">About Us</a>
             <a href="#">Location</a>
             <a href="#">Reserve</a>
-            <button>
+            <button id="header" class="mobile-menu">
                 <span class="material-symbols-outlined nav button">menu</span>
             </button>
         </nav>
@@ -32,7 +39,7 @@
         <div class="hero-text">
             <h1 class="hero-headline-style">Discover New Flavors</h1>
             <p class="hero-subhead-style">Discover the vibrant world of Filipino cuisine nestled in the heart of Chicago. These restaurants offer a delightful array of dishes, from savory adobo to delectable lumpia, providing a taste of the rich and diverse culinary traditions of the Philippines.</p>
-            <a href="#" class="cta-button">Make A Reservation</a>
+            <a href="#" class="cta-button fade-in">Make A Reservation</a>
         </div>
     </section>
     <section>
@@ -103,8 +110,8 @@
            <img src="images/instagramlogo.svg" class="icons">
            <img src="images/facebooklogo.svg"class="icons">
         </div>
-
     </footer>
+    <script src="javascript/javascript.js"></script>
 </body>
 </html>
 
